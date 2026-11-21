@@ -1,0 +1,23 @@
+import math
+
+
+def calculate_area(*args):
+  if len(args) == 1:
+    # Circle: radius
+    r = args[0]
+    return math.pi * r * r
+  elif len(args) == 2:
+    # Rectangle: length, breadth
+    l, b = args
+    return l * b
+  elif len(args) == 3:
+    # Triangle: base, height, and a flag/third value (or Heron's formula)
+    base, height, _ = args
+    return 0.5 * base * height
+  else:
+    return "Invalid number of arguments"
+
+
+print("Area of circle:", round(calculate_area(5), 2))
+print("Area of rectangle:", calculate_area(4, 6))
+print("Area of triangle:", calculate_area(6, 4, "tri"))
