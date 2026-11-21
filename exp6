@@ -1,0 +1,21 @@
+while True:
+  pwd = input("Enter password (or 'stop' to exit): ")
+  if pwd == "stop":
+    break
+
+  has_upper = False
+  has_lower = False
+  has_digit = False
+
+  for ch in pwd:
+    if ch.isupper():
+      has_upper = True
+    elif ch.islower():
+      has_lower = True
+    elif ch.isdigit():
+      has_digit = True
+
+  if len(pwd) >= 8 and has_upper and has_lower and has_digit:
+    print("Strong password")
+  else:
+    print("Weak password")
