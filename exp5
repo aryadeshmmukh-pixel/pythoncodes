@@ -1,0 +1,15 @@
+students = int(input("Enter number of students: "))
+total_class_avg = 0
+
+for i in range(1, students + 1):
+  print(f"\nStudent {i}:")
+  total = 0
+  for j in range(1, 6):
+    marks = float(input(f"Enter marks for test {j}: "))
+    total += marks
+  avg = total / 5
+  total_class_avg += avg
+  print(f"Average for Student {i}: {avg:.2f}")
+
+if students > 0:
+  print(f"\nOverall class average: {total_class_avg / students:.2f}")
