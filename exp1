@@ -1,0 +1,48 @@
+try:
+  a = float(input("Enter first number: "))
+  b = float(input("Enter second number: "))
+
+  print("Basic operations: +, -, *, /")
+  op = input("Choose an operation: ")
+
+  if op == "+":
+    res = a + b
+  elif op == "-":
+    res = a - b
+  elif op == "*":
+    res = a * b
+  elif op == "/":
+    if b == 0:
+      print("Cannot divide by zero")
+      res = None
+    else:
+      res = a / b
+  else:
+    print("Invalid operator")
+    res = None
+
+  if res is not None:
+    print("Basic result:", res)
+
+  # Optional hard calculation
+  hard = input("Do you want a hard calculation (yes/no)? ").lower()
+  if hard == "yes":
+    print("Hard operations: ** (power), % (modulus), // (floor division)")
+    hop = input("Choose hard operation: ")
+    if hop == "**":
+      print("Hard result:", a**b)
+    elif hop == "%":
+      if b == 0:
+        print("Modulus by zero not possible")
+      else:
+        print("Hard result:", a % b)
+    elif hop == "//":
+      if b == 0:
+        print("Floor division by zero not possible")
+      else:
+        print("Hard result:", a // b)
+    else:
+      print("Invalid hard operation")
+
+except ValueError:
+  print("Invalid input! Please enter numbers only.")
