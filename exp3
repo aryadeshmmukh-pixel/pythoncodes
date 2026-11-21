@@ -1,0 +1,12 @@
+assignments = ["Maths HW", "Science Lab", "Python Assignment"]
+
+# Add new assignment
+assignments.append("COA Project")
+
+# Remove completed assignment
+assignments.remove("Maths HW")
+
+# Print updated list
+print("Updated assignments list:")
+for item in assignments:
+  print("-", item)
