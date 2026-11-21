@@ -1,0 +1,10 @@
+def calculate_calories(carbs, fats, proteins):
+  return carbs * 4 + fats * 9 + proteins * 4
+
+
+c = float(input("Enter carbs (in grams): "))
+f = float(input("Enter fats (in grams): "))
+p = float(input("Enter proteins (in grams): "))
+
+total_cal = calculate_calories(c, f, p)
+print("Total daily calories:", total_cal)
