@@ -1,0 +1,14 @@
+EARTH_G = 9.8
+MOON_G = 1.62
+
+
+def calc_weight(mass, gravity):
+  return mass * gravity
+
+
+border = "-" * 30
+print(border)
+mass = float(input("Enter mass in kg: "))
+print("Weight on Earth:", calc_weight(mass, EARTH_G), "N")
+print("Weight on Moon:", calc_weight(mass, MOON_G), "N")
+print(border)
